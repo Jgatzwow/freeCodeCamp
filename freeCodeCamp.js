@@ -23,7 +23,7 @@ function caseInSwitch(val) {
 
 caseInSwitch(1);
 
-/*task 77 - Selecting from Many Options with Switch Statements*/
+/*task 77*/
 
 function switchOfStuff(val) {
     let answer = "";
@@ -43,10 +43,66 @@ function switchOfStuff(val) {
             break;
 
     }
-
-
     // Only change code above this line
     return answer;
 }
 
 switchOfStuff(1);
+
+/*task 78*/
+function sequentialSizes(val) {
+    let answer = "";
+    // Only change code below this line
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low"
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid"
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High"
+            break;
+        default:
+
+    }
+    // Only change code above this line
+    return answer;
+}
+
+sequentialSizes(1);
+
+/*task 79*/
+
+function chainToSwitch(val) {
+    let answer = "";
+    // Only change code below this line
+
+    switch (val) {
+        case "bob":
+            answer = "Marley"
+            break;
+        case 42:
+            answer = "The Answer"
+            break;
+        case 1:
+            answer = "There is no #1"
+            break;
+        case 99:
+            answer = "Missed me by this much!"
+            break;
+        case 7:
+            answer = "Ate Nine"
+            break;
+        default:
+    }
+    // Only change code above this line
+    return answer;
+}
+chainToSwitch(7);
