@@ -141,9 +141,135 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 /*task 16*/
+const createPerson = (name, age, gender) => {
+    // Only change code below this line
+    return {
+        name,
+        age,
+        gender
+    };
+    // Only change code above this line
+};
 /*task 17*/
+// Only change code below this line
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        this.gear = newGear;
+    }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
 /*task 18*/
+// Only change code below this line
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+
+    }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
 /*task 19*/
+// Only change code below this line
+class Thermostat {
+    constructor(fahrenheit) {
+        this.fahrenheit = fahrenheit;
+    }
+
+    get temperature() {
+        return (5 / 9) * (this.fahrenheit - 32);
+    }
+
+    set temperature(celsius) {
+        this.fahrenheit = (celsius * 9.0) / 5 + 32;
+    }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
 /*task 20*/
+<script type="module" src="index.js"></script>
+
 /*task 21*/
+export const uppercaseString = (string) => {
+    return string.toUpperCase();
+}
+
+export const lowercaseString = (string) => {
+    return string.toLowerCase()
+}
 /*task 22*/
+import {uppercaseString, lowercaseString} from "./string_functions.js"
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+/*task 23*/
+import * as stringFunctions from "./string_functions.js"
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+/*task 24*/
+export default function subtract(x, y) {
+    return x - y;
+}
+/*task 25*/
+import subtract from "./math_functions.js"
+// Only change code above this line
+
+subtract(7,4);
+/*task 26*/
+const makeServerRequest = new Promise((resolve, reject) => {
+
+});
+/*task 27*/
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer represents a response from a server
+    let responseFromServer;
+
+    if(responseFromServer) {
+        resolve("We got the data")
+    } else {
+        reject("Data not received")
+    }
+});
+/*task 28*/
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+makeServerRequest.then(result => {
+    console.log(result);
+});
+/*task 29*/
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to false to represent an unsuccessful response from a server
+    let responseFromServer = false;
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then(result => {
+    console.log(result);
+});
+makeServerRequest.catch(error => {
+    console.log(error)
+});
