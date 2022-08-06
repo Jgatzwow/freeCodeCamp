@@ -3,6 +3,9 @@
     --building-color2: #66cc99;
     --building-color3: #cc6699;
     --building-color4: #538cc6;
+    --window-color1: black;
+    --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
 }
 
 * {
@@ -17,6 +20,8 @@ body {
 }
 
 .background-buildings {
+    position: absolute;
+    top: 0;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
@@ -24,6 +29,7 @@ body {
     width: 100%;
 }
 
+/*BACKGROUND BUILDINGS - "bb" stands for "background building"*/
 .bb1 {
     display: flex;
     flex-direction: column;
@@ -32,38 +38,43 @@ body {
     height: 70%;
 }
 
-.bb1a {
-    background-color: var(--building-color1);
-    width: 70%;
+.bb1-window {
+    background: linear-gradient(
+            var(--building-color1),
+            var(--window-color1));
     height: 10%;
 }
+.bb1a {
+    width: 70%;
+}
+
 
 .bb1b {
-    background-color: var(--building-color1);
     width: 80%;
-    height: 10%;
 }
 
 .bb1c {
-    background-color: var(--building-color1);
     width: 90%;
-    height: 10%;
 }
 
 .bb1d {
-    background-color: var(--building-color1);
+    background: linear-gradient(
+            var(--building-color1) 50%,
+            var(--window-color1));
     width: 100%;
     height: 70%;
 }
 
 .bb2 {
-    background-color: var(--building-color2);
     width: 10%;
     height: 50%;
 }
 
 .bb3 {
-    background-color: var(--building-color3);
+    background: repeating-linear-gradient( 90deg,
+            var(--building-color3),
+            var(--building-color3),
+            var(--window-color3) 15%);
     width: 10%;
     height: 55%;
 }
@@ -73,33 +84,64 @@ body {
     width: 11%;
     height: 58%;
 }
-.foreground-buildings {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
+
+/*FOREGROUND BUILDINGS - "fb" stands for "foreground building"*/
 .fb1 {
+    background-color: var(--building-color4);
     width: 10%;
     height: 60%;
 }
+
 .fb2 {
+    background-color: var(--building-color3);
     width: 10%;
     height: 40%;
 }
+
 .fb3 {
+    background-color: var(--building-color1);
     width: 10%;
     height: 35%;
 }
+
 .fb4 {
+    position: relative;
+    left: 10%;
+    background-color: var(--building-color1);
     width: 8%;
     height: 45%;
 }
+
 .fb5 {
+    position: relative;
+    right: 10%;
+    background-color: var(--building-color2);
     width: 10%;
     height: 33%;
 }
+
 .fb6 {
+    background-color: var(--building-color3);
     width: 9%;
     height: 38%;
+}
+
+.foreground-buildings, .background-buildings {
+    position: absolute;
+    top: 0;
+}
+.bb2a {
+
+    border-bottom: 5vh solid var(--building-color2);
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+}
+.bb2b {
+    background: repeating-linear-gradient(
+            var(--building-color2) 0%,
+            var(--building-color2) 6%,
+            var(--window-color2) 6%,
+            var(--window-color2)9%);
+    width: 100%;
+    height: 100%;
 }
