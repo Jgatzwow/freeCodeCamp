@@ -1,0 +1,35 @@
+/*1*/
+function convertCtoF(celsius) {
+    let fahrenheit = celsius * 9/5 +32;
+    return fahrenheit;
+}
+convertCtoF(30);
+/*2*/
+function reverseString(str) {
+    let newArr = [];
+    newArr = str.split("");
+    newArr = newArr.reverse();
+    newArr = newArr.join("")
+    return newArr
+
+}
+
+reverseString("hello");
+/*3*/
+/*4*/
+/*5*/
+/*6*/
+/*7*/
+/*8*/
+/*9*/
+/*10*/
+/*11*/
+/*12*/
+/*13*/
+/*14*/
+/*15*/
+/*16*/
+/*17*/
+/*18*/
+/*19*/
+/*20*/
